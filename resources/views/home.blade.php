@@ -7,6 +7,27 @@
     <title>Pacchetti Vacanza</title>
 </head>
 <body>
-    <h1>pacchetti vacanza</h1>
+    <h1>Pacchetti Vacanza</h1>
+    <ul>
+        @foreach ($packages as $package)
+        <li>
+            <div>Nome: {{ $package->name }}</div>
+
+            <div>Descrizione: {{ $package->descpription }}</div>
+
+            <div>Prezzo: {{ $package->price }} €</div>
+
+            <div>Hotel: {{ $package->hotel_name }}</div>
+
+            <div>Stelle: {{ $package->hotel_stars }}</div>
+
+            <div>Volo Andata: {{ $package->outbound_flight }}</div>
+
+            <div>Volo Ritorno: {{ $package->return_flight }}</div>
+
+        </li>
+        @endforeach
+    </ul>
+
 </body>
 </html>
